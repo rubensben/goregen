@@ -113,6 +113,19 @@ Usage of ./goregen:
     	print version & exit
 ```
 
+Log Datas 
+------------
+
+- Under Linux : 
+
+log all datas : goregen 2>&1 |tee -a yourregenfile.txt
+log charging value : ./goregen 2>&1 |grep CEST| sed -e 's,.*CEST ,, |sed 's, .*,,' > yourregenfile.log
+
+- Under Windows
+
+Log all datas : goregen &> file.log
+
+
 Contributing
 ------------
 
